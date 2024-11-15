@@ -1,0 +1,43 @@
+@import "./reset.css";
+
+:root {
+  --color-1: #0085c7;
+  --color-2: #f4c300;
+  --color-3: #000000;
+  --color-4: #009f3d;
+  --color-4: #df0024;
+}
+
+html,
+body {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+  background-color: #000;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  background-color: #f5f5f5;
+  width: calc(100% - 5rem);
+}
+
+.continent {
+  color: var(--color);
+}
+
+.continent h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.continent b {
+  font-weight: 600;
+}

@@ -22,3 +22,28 @@ Excercice pour progresser en :
 - `npm run build` - Builds for production, emitting to `dist/`. Prerenders app to static HTML
 
 - `npm run preview` - Starts a server at http://localhost:4173/ to test production build locally
+
+## Apprentissage
+
+### CSS
+
+- [reset.css](https://github.com/elad2412/the-new-css-reset) pour repartir de zéro et éviter d'avoir des différences dues au navigateur
+- pseudo-éléments _::after_, _::before_
+- vh, vw : height or width viewport (en pourcentage)
+
+### HTML
+
+- la différence entre `<b>` (mise en valeur visuelle), `<i>` (décalage visuel), `<strong>` (mise en exergue) et `<em>` (emphase)
+
+### TS
+
+- Utiliser le JSON pour inferer un type
+
+```ts
+type ItemOf<T> = T extends (infer U)[] ? U : never;
+type Continent = ItemOf<typeof continents>;
+```
+
+### Autre
+
+- serif = empattement, évoue plutôt le poids de l'histoire, le sérieux...
