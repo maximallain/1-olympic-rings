@@ -1,5 +1,6 @@
 import { hydrate, prerender as ssr } from "preact-iso";
 import "./css/main.css";
+import "./css/graph.css";
 import continentMedals from "./data/continent_medals.json";
 
 type Continent = {
@@ -8,6 +9,10 @@ type Continent = {
   silver: number;
   bronze: number;
   total: number;
+};
+
+const Medal = ({ type, count }: { type: "gold" | "silver" | "bronze"; count: number }) => {
+  return <li className={"continent__medal" + type}>{count}</li>;
 };
 
 const ContinentSection = (continent: Continent & { index: number }) => {
@@ -22,18 +27,18 @@ const ContinentSection = (continent: Continent & { index: number }) => {
           {continent.name}: <b>{continent.total}</b>
         </h2>
       </header>
-      <p>
-        <span className="gold">{continent.gold}</span> Gold
-        <span className="silver">{continent.silver}</span> Silver
-        <span className="bronze">{continent.bronze}</span> Bronze
-      </p>
+      <ul className="continent__medals">
+        <Medal type="gold" count={continent.gold} />
+        <Medal type="silver" count={continent.silver} />
+        <Medal type="bronze" count={continent.bronze} />
+      </ul>
     </section>
   );
 };
 
 export function App() {
   return (
-    <div className="container">
+    <div className="graph">
       {continentMedals.map((continent, index) => (
         <ContinentSection key={continent.name} {...continent} index={index} />
       ))}

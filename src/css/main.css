@@ -1,11 +1,8 @@
 @import "./reset.css";
 
 :root {
-  --color-1: #0085c7;
-  --color-2: #f4c300;
-  --color-3: #000000;
-  --color-4: #009f3d;
-  --color-4: #df0024;
+  --text: #000;
+  --text-light: rgba(102, 103, 99, 0.8);
 }
 
 html,
@@ -13,8 +10,10 @@ body {
   font-family: "Manrope", sans-serif;
   line-height: 1.5;
   font-weight: 500;
-  background-color: #000;
+  background: linear-gradient(130deg, rgba(255, 255, 1, 0.2), rgba(255, 1, 1509, 0.2)),
+    url(../images/poster.jpg) center center / cover no-repeat, linear-gradient(130deg, #9bc8c5, #f6ead2, #a2deaa);
   min-height: 100vh;
+  color: var(--text);
 }
 
 body {
@@ -24,20 +23,30 @@ body {
   text-align: center;
 }
 
-.container {
+h1 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--text);
+}
+
+.card {
   background-color: #f5f5f5;
-  width: calc(100% - 5rem);
+  padding: 1rem;
 }
 
-.continent {
-  color: var(--color);
+.methodology {
+  font-size: 0.7rem;
+  color: var(--text-light);
 }
 
-.continent h2 {
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-
-.continent b {
-  font-weight: 600;
+.source {
+  font-size: 1rem;
+  color: var(--text-light);
 }

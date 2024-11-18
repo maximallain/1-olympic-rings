@@ -1,0 +1,55 @@
+:root {
+  --color-1: #0085c7;
+  --color-2: #f4c300;
+  --color-3: #000000;
+  --color-4: #009f3d;
+  --color-5: #df0024;
+}
+
+.graph {
+  width: calc(100% - 5rem);
+}
+
+.continent {
+  color: var(--color);
+}
+
+.continent h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.continent b {
+  font-weight: 600;
+}
+
+.continent__medals {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gold {
+  --medal-start: #fdf5c3;
+  --medal-end: #fbe334;
+  --medal-shadow: #dac215;
+}
+
+.silver {
+  --medal-start: #f3f0f0;
+  --medal-end: #d2cdca;
+  --medal-shadow: #a4a09d;
+}
+
+.bronze {
+  --medal-start: #f3f0f0;
+  --medal-end: #cd7f32;
+  --medal-shadow: #a4a09d;
+}
+
+.continent__medal:before {
+  content: "";
+  background-color: var(--medal-end);
+  width: 20px;
+  height: 20px;
+}

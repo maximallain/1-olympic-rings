@@ -30,6 +30,7 @@ Excercice pour progresser en :
 - [reset.css](https://github.com/elad2412/the-new-css-reset) pour repartir de zéro et éviter d'avoir des différences dues au navigateur
 - pseudo-éléments _::after_, _::before_
 - vh, vw : height or width viewport (en pourcentage)
+- `linear-gradient` qui sert à faire un fond dégradé entre plusieurs couleurs
 
 ### HTML
 
