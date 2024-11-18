@@ -4,6 +4,7 @@
   --color-3: #000000;
   --color-4: #009f3d;
   --color-5: #df0024;
+  --medal-size: 0.8rem;
 }
 
 .graph {
@@ -26,7 +27,24 @@
 .continent__medals {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.continent__medal {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.continent li::before {
+  content: "";
+  width: var(--medal-size);
+  height: var(--medal-size);
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(to bottom, var(--medal-start), var(--medal-end));
+  box-shadow: inset 0px -1px 1px var(--medal-shadow);
 }
 
 .gold {
@@ -42,14 +60,7 @@
 }
 
 .bronze {
-  --medal-start: #f3f0f0;
-  --medal-end: #cd7f32;
-  --medal-shadow: #a4a09d;
-}
-
-.continent__medal:before {
-  content: "";
-  background-color: var(--medal-end);
-  width: 20px;
-  height: 20px;
+  --medal-start: #fce7bd;
+  --medal-end: #fa9e1b;
+  --medal-shadow: #d6830d;
 }

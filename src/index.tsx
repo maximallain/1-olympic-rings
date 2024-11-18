@@ -12,7 +12,7 @@ type Continent = {
 };
 
 const Medal = ({ type, count }: { type: "gold" | "silver" | "bronze"; count: number }) => {
-  return <li className={"continent__medal" + type}>{count}</li>;
+  return <li className={"continent__medal " + type}>{count}</li>;
 };
 
 const ContinentSection = (continent: Continent & { index: number }) => {
