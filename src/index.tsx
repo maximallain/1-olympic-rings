@@ -15,10 +15,11 @@ const Medal = ({ type, count }: { type: "gold" | "silver" | "bronze"; count: num
   return <li className={"continent__medal " + type}>{count}</li>;
 };
 
-const ContinentSection = (continent: Continent & { index: number }) => {
+const ContinentSection = (continent: Continent & { index: number; max: number }) => {
   const style = {
     "--index": continent.index,
     "--color": `var(--color-${continent.index + 1})`,
+    "--ratio": continent.total / continent.max,
   };
 
   return (
@@ -39,10 +40,12 @@ const ContinentSection = (continent: Continent & { index: number }) => {
 };
 
 export function App() {
+  const totalMedalsCount = continentMedals.map((c) => c.total);
+  const maxMedalsCount = Math.max(...totalMedalsCount);
   return (
     <div className="graph">
       {continentMedals.map((continent, index) => (
-        <ContinentSection key={continent.name} {...continent} index={index} />
+        <ContinentSection key={continent.name} {...continent} index={index} max={maxMedalsCount} />
       ))}
     </div>
   );

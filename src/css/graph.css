@@ -1,11 +1,11 @@
 :root {
   --color-1: #0085c7;
-  --color-2: #f4c300;
+  --color-2: #ffb114;
   --color-3: #000000;
   --color-4: #009f3d;
   --color-5: #df0024;
   --medal-size: 0.8rem;
-  --stroke: 1rem;
+  --stroke: 1.5rem;
 }
 
 .graph {
@@ -14,11 +14,8 @@
   display: grid;
   grid-template-columns: repeat(3, calc(var(--stroke) * 12));
   gap: var(--stroke);
+  justify-content: center;
 }
-
-/* .graph > *:nth-child(2n) {
-  align-self: flex-end;
-} */
 
 .continent {
   color: var(--color);
@@ -28,18 +25,20 @@
   gap: 1rem;
   grid-column: round(down, (var(--index) + 2)/2) / span 1;
   grid-row: 1 / span 1;
+  width: calc(12 * var(--stroke));
 }
 
 .continent:nth-child(2n) {
   flex-direction: column-reverse;
-  margin-top: calc(var(--stroke) * 11 - 52px);
-  margin-left: calc(var(--stroke) * 13);
+  margin-top: calc(var(--stroke) * 5.5 + 52px);
+  margin-left: calc(var(--stroke) * 6.5);
 }
 
 .continent header {
   height: 52px;
   display: flex;
   flex-direction: column;
+  gap: 0.3;
 }
 
 .continent h2 {
@@ -93,7 +92,7 @@
 }
 
 .ring {
-  border: var(--color) solid var(--stroke);
+  border: var(--color) solid calc(var(--stroke) * var(--ratio) * 1.5);
   height: calc(12 * var(--stroke));
   width: calc(12 * var(--stroke));
   border-radius: 50%;
