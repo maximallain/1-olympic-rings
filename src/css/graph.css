@@ -92,8 +92,41 @@
 }
 
 .ring {
-  border: var(--color) solid calc(var(--stroke) * var(--ratio) * 1.5);
-  height: calc(12 * var(--stroke));
-  width: calc(12 * var(--stroke));
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.ring::before,
+.ring::after {
+  content: "";
+  position: absolute;
   border-radius: 50%;
+  inset: 0;
+  border: solid calc(var(--stroke) * var(--ratio) * 1.5) var(--color);
+}
+
+.ring::after {
+  border-color: transparent;
+}
+
+.continent:nth-child(1) .ring::after {
+  border-right-color: var(--color);
+  z-index: 6;
+}
+
+.continent:nth-child(2) .ring::after {
+  border-top-color: var(--color);
+  z-index: 5;
+}
+
+.continent:nth-child(3) .ring::after {
+  border-right-color: var(--color);
+  z-index: 4;
+}
+
+.continent:nth-child(4) .ring::after {
+  border-top-color: var(--color);
+  z-index: 3;
 }

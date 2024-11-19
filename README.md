@@ -35,7 +35,8 @@ Excercice pour progresser en :
 - Grid
   - `grid-template-columns` sert à définir la répartition des éléments sur la grille
   - `grid-column`sert à définir la place occupée en position ou en nombre de colonnes
-  - `grid-row`
+  - `grid-row` idem pour les lignes
+- En position `absolute`, `inset`permet de définir le `top`, `bottom`, `right` and `left` de la même manière que `margin`
 
 ### HTML
 
