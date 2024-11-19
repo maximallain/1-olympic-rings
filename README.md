@@ -31,6 +31,11 @@ Excercice pour progresser en :
 - pseudo-éléments _::after_, _::before_
 - vh, vw : height or width viewport (en pourcentage)
 - `linear-gradient` qui sert à faire un fond dégradé entre plusieurs couleurs
+- [Shadows Brumm](https://shadows.brumm.af) pour définir une ombre
+- Grid
+  - `grid-template-columns` sert à définir la répartition des éléments sur la grille
+  - `grid-column`sert à définir la place occupée en position ou en nombre de colonnes
+  - `grid-row`
 
 ### HTML
 

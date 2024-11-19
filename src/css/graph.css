@@ -5,14 +5,41 @@
   --color-4: #009f3d;
   --color-5: #df0024;
   --medal-size: 0.8rem;
+  --stroke: 1rem;
 }
 
 .graph {
-  width: calc(100% - 5rem);
+  width: calc(100% - 1rem);
+  height: calc(100% - 2rem);
+  display: grid;
+  grid-template-columns: repeat(3, calc(var(--stroke) * 12));
+  gap: var(--stroke);
 }
+
+/* .graph > *:nth-child(2n) {
+  align-self: flex-end;
+} */
 
 .continent {
   color: var(--color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  grid-column: round(down, (var(--index) + 2)/2) / span 1;
+  grid-row: 1 / span 1;
+}
+
+.continent:nth-child(2n) {
+  flex-direction: column-reverse;
+  margin-top: calc(var(--stroke) * 11 - 52px);
+  margin-left: calc(var(--stroke) * 13);
+}
+
+.continent header {
+  height: 52px;
+  display: flex;
+  flex-direction: column;
 }
 
 .continent h2 {
@@ -63,4 +90,11 @@
   --medal-start: #fce7bd;
   --medal-end: #fa9e1b;
   --medal-shadow: #d6830d;
+}
+
+.ring {
+  border: var(--color) solid var(--stroke);
+  height: calc(12 * var(--stroke));
+  width: calc(12 * var(--stroke));
+  border-radius: 50%;
 }

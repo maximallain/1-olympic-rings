@@ -17,22 +17,24 @@ const Medal = ({ type, count }: { type: "gold" | "silver" | "bronze"; count: num
 
 const ContinentSection = (continent: Continent & { index: number }) => {
   const style = {
+    "--index": continent.index,
     "--color": `var(--color-${continent.index + 1})`,
   };
 
   return (
-    <section className="continent" style={style}>
+    <article className="continent" style={style}>
       <header>
         <h2>
           {continent.name}: <b>{continent.total}</b>
         </h2>
+        <ul className="continent__medals">
+          <Medal type="gold" count={continent.gold} />
+          <Medal type="silver" count={continent.silver} />
+          <Medal type="bronze" count={continent.bronze} />
+        </ul>
       </header>
-      <ul className="continent__medals">
-        <Medal type="gold" count={continent.gold} />
-        <Medal type="silver" count={continent.silver} />
-        <Medal type="bronze" count={continent.bronze} />
-      </ul>
-    </section>
+      <div className="ring" />
+    </article>
   );
 };
 
