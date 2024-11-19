@@ -37,6 +37,10 @@ Excercice pour progresser en :
   - `grid-column`sert à définir la place occupée en position ou en nombre de colonnes
   - `grid-row` idem pour les lignes
 - En position `absolute`, `inset`permet de définir le `top`, `bottom`, `right` and `left` de la même manière que `margin`
+- `animation`
+  - création de `keyframes` se basant sur le from / to / 50%
+  - [cubic-bezier](https://cubic-bezier.com) pour définir des mouvements de rebonds
+  - `animation-fill-mode` a des règles particulières pour définir le sens de l'animation
 
 ### HTML
 
